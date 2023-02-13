@@ -1,0 +1,48 @@
+<html>
+  <head>
+      <style>
+          .redfun{
+              color:red;
+              font-size: 50px;
+              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          }
+          .bigpadding{
+              padding-top: 70px; padding-left: 70px;
+          }
+          #bigmargin{
+              margin-top: 100px;
+          }
+      </style>
+  </head>
+  <body>
+    <h1 class="redfun bigpadding">Hello</h1>
+    <p>This is my first website - Front End Web Development</p>
+
+    <ul>
+      <li class="redfun">html - the skeleton of a webiste</li>
+      <li id="bigmargin">CSS (cascading scale sheet) - gives its appearance</li>
+      <li>JavaScript - Muscle to the site</li>
+      <li>(Photoshop, figma - to make thing pretty)</li>
+    </ul>
+<button onclick="alertme()">alert</button>
+<input id="weight" placeholder="kg"></input>
+<button onclick="calculatestone()">convert to stone</button>
+<div id="result"></div>
+
+    <script>
+        function alertme(){
+            alert("hello")
+        }
+        function calculatestone(){
+            let weightkg=document.getElementById("weight").value;
+            let weightstone=weightkg/6.35;
+            document.getElementById("result").innerHTML=weightstone;
+            if(weightstone > 15){
+                alert("You ate all the pies")
+            }else if(weightstone < 5){
+                alert("You need to eat more pies")
+            }
+        }
+    </script>
+  </body>
+</html>
