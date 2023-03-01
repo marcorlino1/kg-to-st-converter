@@ -1,18 +1,25 @@
 <html>
   <head>
-      <style>
-          .redfun{
-              color:red;
-              font-size: 50px;
-              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-          }
-          .bigpadding{
-              padding-top: 70px; padding-left: 70px;
-          }
-          #bigmargin{
-              margin-top: 100px;
-          }
-      </style>
+    <style>
+      .redfun {
+        color: red;
+        font-size: 50px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      .bigpadding {
+        padding-top: 70px;
+        padding-left: 70px;
+      }
+      #bigmargin {
+        margin-top: 100px;
+      }
+      body {
+        background-image: url("background1.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 50% 100%;
+      }
+    </style>
   </head>
   <body>
     <h1 class="redfun bigpadding">Hello</h1>
@@ -24,25 +31,38 @@
       <li>JavaScript - Muscle to the site</li>
       <li>(Photoshop, figma - to make thing pretty)</li>
     </ul>
-<button onclick="alertme()">alert</button>
-<input id="weight" placeholder="kg"></input>
-<button onclick="calculatestone()">convert to stone</button>
-<div id="result"></div>
+
+    <p>
+      <a href="https://instagram.com/marco_the_adventurer?igshid=YmMyMTA2M2Y="
+        >Visit My Journey</a
+      >
+    </p>
+
+    <img
+      src="67588079.jpg"
+      alt="Diet and Workout"
+      style="width: 300px; height: 200px"
+    />
+    <p></p>
+    <button onclick="alertme()">alert</button>
+    <input id="weight" placeholder="kg" />
+    <button onclick="calculatestone()">convert to stone</button>
+    <div id="result"></div>
 
     <script>
-        function alertme(){
-            alert("hello")
+      function alertme() {
+        alert("hello");
+      }
+      function calculatestone() {
+        let weightkg = document.getElementById("weight").value;
+        let weightstone = weightkg / 6.35;
+        document.getElementById("result").innerHTML = weightstone;
+        if (weightstone > 15) {
+          alert("You ate all the pies");
+        } else if (weightstone < 5) {
+          alert("You need to eat more pies");
         }
-        function calculatestone(){
-            let weightkg=document.getElementById("weight").value;
-            let weightstone=weightkg/6.35;
-            document.getElementById("result").innerHTML=weightstone;
-            if(weightstone > 15){
-                alert("You ate all the pies")
-            }else if(weightstone < 5){
-                alert("You need to eat more pies")
-            }
-        }
+      }
     </script>
   </body>
 </html>
